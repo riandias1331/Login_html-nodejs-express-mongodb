@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url(bg.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .navbar {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px 10%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .navbar .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .hero .btn {
+      background: #fff;
+      color: #333;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 40px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background: #f0f0f0;
+    }
+
+    .auth-section {
+      margin-top: 50px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .auth-btn {
+      background: #fff;
+      color: #333;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 40px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .auth-btn:hover {
+      background: #f0f0f0;
+    }
+
+    footer {
+      margin-top: 499px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="logo">MyWebsite</a>
+    <div class="nav-links">
+      <a href="/page">Home</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="auth-section">
+        <button type="submit" class="btn" onclick="window.location.href='/login'">Login</button>
+        <button type="submit" class="btn" onclick="window.location.href='/register'">Register</button>
+    </div>
+  </section>
+
+</body>
+</html>
