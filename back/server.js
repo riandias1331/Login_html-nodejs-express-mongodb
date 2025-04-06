@@ -26,13 +26,8 @@ const sessionOptions = session({
 app.use(sessionOptions) // aplica as opções de sessão configuradas
 app.use(flash()) // ativa o uso de flash messages
 
-const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL)
-    .then(() => {
-        console.log('Database Connected')
-        app.emit('DataBase')
-    })
-    .catch(() => console.log('Database is not Connected'))
+const dbConfig = require('./src/config/database.js')
+dbConfig(app)
 
 const routes = require('./routes')
 app.use(routes)
